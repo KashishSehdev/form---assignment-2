@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>questionaire quiz</title>
+    <link rel="stylesheet" href="/style.css">
+
+    <style>
+
+body{
+    font-family: 'Roboto', sans-serif ;
+    margin: 0;
+    text-align: left;
+}
+
+    </style>
+    
+</head>
+<body>
+    
+    <div>
+     <p id="countdown"></p>
+      <script>
+          const startingMinutes = 10;
+        let time = startingMinutes * 60;
+        
+        const countdownEl = document.getElementById('countdown');
+        
+        setInterval(updateCountdown, 1000);
+        
+        function updateCountdown() {
+            const minutes = Math.floor(time / 60);
+            let seconds = time % 60;
+        
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+        
+            countdownEl.innerHTML = `${minutes}:${seconds}`;
+            time--;
+        }
+
+        function check() {
+            document.write("THE FORM IS SUBMITTED")
+        }
+
+      </script>
+    </div>
+    
+    <div id="form">
+    <form action="Quiz">
+        <div style="background-color: aqua;"><h1>QUESTIONAIRE -- QUIZ</h1></div>
+    </form>
+    
+    <form name="quiz" id="quiz">
+    <div>
+        <h2 style="color: rgb(145, 55, 125);">Q1. How many hours do we have in a day?</h2>
+       <p style="font-size: 20px; color: rgb(124, 94, 55);"><input type="radio" name="Question1" value="22 HOURS"> A. 22 HOURS</p>
+       <p style="font-size: 20px; color: rgb(55, 124, 92);"><input type="radio" name="Question1" value="24 HOURS"> B. 24 HOURS</p> 
+       <p style="font-size: 20px; color: rgb(178, 180, 57);"><input type="radio" name="Question1" value="18 HOURS"> C. 18 HOURS</p>
+    </div>
+
+    <div>
+        <h2 style="color: rgb(145, 55, 125);">Q2. Which animal is called the king of the jungle?</h2>
+       <p style="font-size: 20px; color: rgb(230, 157, 63);"><input type="radio" name="Question2" value="MONKEY"> A. MONKEY</p>
+       <p style="font-size: 20px; color: rgb(66, 125, 148);"><input type="radio" name="Question2" value="LION"> B. LION</p> 
+       <p style="font-size: 20px; color: rgb(148, 67, 130);"><input type="radio" name="Question2" value="ELEPHANT"> C. ELEPHANT</p>
+    </div>
+
+    <div>
+        <h2 style="color: rgb(145, 55, 125);">Q3. Which month of the year has the least number of days?</h2>
+       <p style="font-size: 20px; color: rgb(189, 160, 123);"><input type="radio" name="Question3" value="AUGUST"> A. AUGUST</p>
+       <p style="font-size: 20px; color: rgb(96, 204, 186);"><input type="radio" name="Question3" value="JANUARY"> B. JANUARY</p> 
+       <p style="font-size: 20px; color: rgb(136, 51, 91);"><input type="radio" name="Question3" value="FEBRUARY"> C. FEBRUARY</p>
+    </div>
+
+    <div>
+        <h2 style="color: rgb(145, 55, 125);">Q4. What are the vowels of the English alphabet?</h2>
+       <p style="font-size: 20px; color: rgb(61, 55, 145);"><input type="radio" name="Question4" value="A,E,I,O,U"> A. A,E,I,O,U</p>
+       <p style="font-size: 20px; color: rgb(197, 116, 78);"><input type="radio" name="Question4" value="I,O,P,N,K"> B. I,O,P,N,K</p> 
+       <p style="font-size: 20px; color: rgb(199, 65, 65);"><input type="radio" name="Question4" value="T,J,U,O,D"> C. T,J,U,O,D</p>
+    </div>
+
+    <div>
+        <h2 style="color: rgb(145, 55, 125);">Q5. What is the capital of India?</h2>
+       <p style="font-size: 20px; color: rgb(255, 1, 1);"><input type="radio" name="Question5" value="MUMBAI"> A. MUMBAI</p>
+       <p style="font-size: 20px; color: rgb(0, 89, 255);"><input type="radio" name="Question5" value="NEW DELHI"> B. NEW DELHI</p> 
+       <p style="font-size: 20px; color: rgb(59, 36, 6);"><input type="radio" name="Question5" value="LUCKNOW"> C. LUCKNOW</p>
+    </div>
+
+
+    <input style="background-color: rgb(220, 96, 224);" type="button" name="" value="SUBMIT" onclick="check()">
+    <input style="background-color: rgb(167, 87, 241);" type="RESET">
+    </form>
+
+
+   
+
+
+</body>
+</html>
